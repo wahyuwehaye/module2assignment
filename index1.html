@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    </style>
+    <title>Delicious Bakery</title>
+</head>
+<body>
+
+    <header class="sticky-header">
+        <div class="container">
+            <h1 class="logo">Delicious Bakery</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home">
+            <h2>Welcome to Delicious Bakery</h2>
+            <p>Indulge in the finest baked goods made with love and passion.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <section id="asymmetrical-grid" class="asymmetrical-grid-container">
+                <div class="asymmetrical-grid-item">Item 1</div>
+                <div class="asymmetrical-grid-item">Item 2</div>
+                <div class="asymmetrical-grid-item">Item 3</div>
+                <div class="asymmetrical-grid-item">Item 4</div>
+            </section>
+        </section>
+
+        <section id="five-column-grid" class="five-column-grid-container">
+            <div class="five-column-grid-item">Item 1</div>
+            <div class="five-column-grid-item">Item 2</div>
+            <div class="five-column-grid-item">Item 3</div>
+            <div class="five-column-grid-item">Item 4</div>
+            <div class="five-column-grid-item">Item 5</div>
+            <div class="five-column-grid-item">Item 6</div>
+            <div class="five-column-grid-item">Item 7</div>
+            <div class="five-column-grid-item">Item 8</div>
+            <div class="five-column-grid-item">Item 9</div>
+            <div class="five-column-grid-item">Item 10</div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Discover the story behind Delicious Bakery and our commitment to quality.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us to place an order or inquire about our services.</p>
+        </section>
+
+        <div class="responsive-image">
+            <picture>
+                <source media="(max-width: 767px)" srcset="https://via.placeholder.com/320x240">
+    
+                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="https://via.placeholder.com/640x480">
+    
+                <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/1024x768">
+    
+                <img src="https://via.placeholder.com/1200x800" alt="Responsive Image">
+            </picture>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

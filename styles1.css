@@ -1,0 +1,165 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('images/background.avif'); /* Replace with an actual image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: Fixed background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #f8f8f8;
+    z-index: 100;
+}
+
+.logo {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    list-style-type: square;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #f8f8f8;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.asymmetrical-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+/* Add animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0; /* Adjust margin as needed */
+    border: 1px solid #ddd; /* Optional: Add border for styling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add box-shadow for styling */
+}
+
+/* Your existing CSS */
+
+.five-column-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 5 equal-width columns */
+    grid-template-rows: 1fr 1fr; /* 2 equal-height rows */
+    gap: 20px;
+}
+
+.five-column-grid-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Your existing CSS */
+/* Your existing CSS */
+
+.asymmetrical-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Adjust column widths as needed */
+    gap: 20px;
+    background-color: #f8f8f8; /* Set background color */
+    padding: 20px; /* Add padding to the container */
+}
+
+.asymmetrical-grid-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in-out forwards;
+    background-color: #fff; /* Set initial background color */
+    transition: background-color 0.5s ease-in-out; /* Transition for background color */
+}
+
+/* Animation method */
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        background-color: #fff; /* Start background color */
+    }
+    to {
+        opacity: 1;
+        background-color: #e0e0e0; /* End background color */
+    }
+}
+
+/* Your existing CSS */
